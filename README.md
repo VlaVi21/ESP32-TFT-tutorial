@@ -96,9 +96,10 @@ monitor_speed = 115200
 ![Крок 6](images_2.0/VS_6.jpg)
 
 *Крок 6 - Додаткові налаштування*
-#define TFT_BL ... - якщо хочеш керувати підсвіткою дисплея.
-#define TOUCH_CS ... - якщо є тач-панель.
-#define SPI_TOUCH_FREQUENCY ... - швидкість для тача.
+
+**#define TFT_BL** ... - якщо хочеш керувати підсвіткою дисплея.
+**#define TOUCH_CS** ... - якщо є тач-панель.
+**#define SPI_TOUCH_FREQUENCY** ... - швидкість для тача.
 
 ---
 
