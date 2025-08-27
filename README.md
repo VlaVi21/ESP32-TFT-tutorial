@@ -35,7 +35,7 @@
 
 Приклад у `platformio.ini`:  
 
-```ini
+```
 [env:featheresp32]
 platform = espressif32
 board = featheresp32
@@ -44,7 +44,8 @@ framework = arduino
 lib_deps =
     bodmer/TFT_eSPI @ ^2.5.43
 
-monitor_speed = 115200```
+monitor_speed = 115200
+```
 
 ---
 
