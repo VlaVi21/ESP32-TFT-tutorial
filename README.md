@@ -26,7 +26,7 @@
 
 ## Схема підключення
 
-![Схема пікдлючення TFT дисплею до ESP32](images/Sh_TFT_V2(final).png)
+![Схема пікдлючення TFT дисплею до ESP32](images_2.0/Sh_TFT_V2(final).png)
 *Особиста розробка, виконана у графічному редакторі.*
 
 ---
@@ -67,6 +67,24 @@ monitor_speed = 115200
 У TFT_eSPI всі піни прописуються у файлі:
 `.pio/libdeps/<твій_проєкт>/TFT_eSPI/User_Setup.h`
 Там вказуємо:
+
+![Крок 1](images_2.0/VS_1.jpg)
+*Крок 1*
+
+![Крок 2](images_2.0/tutorVS_1.png)
+*Крок 2*
+
+![Крок 3](images_2.0/tutorVS_1.png)
+*Крок 3*
+
+![Крок 4](images_2.0/tutorVS_1.png)
+*Крок 4*
+
+![Крок 5](images_2.0/tutorVS_1.png)
+*Крок 5*
+
+![Крок 6](images_2.0/tutorVS_1.png)
+*Крок 6*
 
 ---
 
