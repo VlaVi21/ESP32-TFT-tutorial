@@ -37,7 +37,7 @@
 
 Приклад у `platformio.ini`:  
 
-```
+```С++
 [env:featheresp32]
 platform = espressif32
 board = featheresp32
@@ -92,8 +92,8 @@ monitor_speed = 115200
 ![Крок 6](images_2.0/VS_6.jpg)
 
 **Якщо ви підключили все згідно з моїми пінами, можете скопіювати й вставити мій код у папку. Я видалив зайві коментарі й залишив тільки необхідне для стабільної роботи. Але перед цим, будь ласка, уважно прочитайте весь файл.**
-```
 
+```С++
 #define USER_SETUP_INFO "User_Setup"
 
 #define ST7735_DRIVER      
@@ -129,7 +129,7 @@ monitor_speed = 115200
 
 ## Перевірка роботи ("Hello World")
 Завантажте на плату цю прошивку:
-```
+```С++
 #include <TFT_eSPI.h>
 #include <SPI.h>
 
