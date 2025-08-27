@@ -49,14 +49,14 @@ monitor_speed = 115200
 ```
 Приклад у вкладці **Libraries**:
 
-![Крок 1](images_2.0/tutorVS_1.png)
 *Крок 1*
+![Крок 1](images_2.0/tutorVS_1.png)
 
-![Крок 2](images_2.0/tutorVS_1.1.png)
 *Крок 2*
+![Крок 2](images_2.0/tutorVS_1.1.png)
 
-![Крок 3](images_2.0/tutorVS_1.2.png)
 *Крок 3*
+![Крок 3](images_2.0/tutorVS_1.2.png)
 
 *Раджу обирати версію, рекомендовану розробником цієї бібліотеки.*
 ---
@@ -67,6 +67,7 @@ monitor_speed = 115200
 `.pio/libdeps/<project name>/TFT_eSPI/User_Setup.h`
 
 ![Шлях до папки з налаштуваннями пінів](images_2.0/VS_Lib_2.0.png)
+
 *Шлях до папки з налаштуваннями пінів*
 
 Там вказуємо:
