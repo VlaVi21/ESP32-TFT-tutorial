@@ -35,6 +35,7 @@
 
 Приклад у `platformio.ini`:  
 
+```ini
 [env:featheresp32]
 platform = espressif32
 board = featheresp32
