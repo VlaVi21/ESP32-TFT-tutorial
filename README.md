@@ -37,7 +37,7 @@
 
 Приклад у `platformio.ini`:  
 
-```С++
+```С
 [env:featheresp32]
 platform = espressif32
 board = featheresp32
