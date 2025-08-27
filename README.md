@@ -48,6 +48,16 @@ lib_deps =
 
 monitor_speed = 115200
 ```
+Приклад у вкладці **Libraries**:
+
+![Крок 1](images_2.0/tutorVS_1.png).
+*Крок 1*
+
+![Крок 2](images_2.0/tutorVS_1.1.png).
+*Крок 2*
+
+![Крок 3](images_2.0/tutorVS_1.2.png).
+*Крок 3*
 
 ---
 
