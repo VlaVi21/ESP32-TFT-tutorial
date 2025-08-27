@@ -67,6 +67,7 @@ monitor_speed = 115200
 `.pio/libdeps/<project name>/TFT_eSPI/User_Setup.h`
 
 ![Шлях до папки з налаштуваннями пінів](images_2.0/VS_Lib_2.0.png)
+
 *Шлях до папки з налаштуваннями пінів*
 
 **Там вказуємо:**
