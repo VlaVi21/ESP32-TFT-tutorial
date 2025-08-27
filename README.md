@@ -91,12 +91,86 @@ monitor_speed = 115200
 *Крок 6 - Частота SPI (залишаємо все як є)*
 ![Крок 6](images_2.0/VS_6.jpg)
 
+**Якщо ви підключили все згідно з моїми пінами, можете скопіювати й вставити мій код у папку. Я видалив зайві коментарі й залишив тільки необхідне для стабільної роботи. Але перед цим, будь ласка, уважно прочитайте весь файл.**
+```
+#define USER_SETUP_INFO User_Setup
 
+#define ST7735_DRIVER       Define additional parameters below for this display
+
+#define TFT_RGB_ORDER TFT_RGB   Colour order Red-Green-Blue
+
+#define TFT_WIDTH  128
+#define TFT_HEIGHT 160
+
+#define ST7735_BLACKTAB
+
+#define TFT_MISO -1
+#define TFT_MOSI 23
+#define TFT_SCLK 18
+#define TFT_CS   5   Chip select control pin
+#define TFT_DC   16   Data Command control pin
+#define TFT_RST  17   Reset pin (could connect to RST pin)
+
+#define LOAD_GLCD    Font 1. Original Adafruit 8 pixel font needs ~1820 bytes in FLASH
+#define LOAD_FONT2   Font 2. Small 16 pixel high font, needs ~3534 bytes in FLASH, 96 characters
+#define LOAD_FONT4   Font 4. Medium 26 pixel high font, needs ~5848 bytes in FLASH, 96 characters
+#define LOAD_FONT6   Font 6. Large 48 pixel font, needs ~2666 bytes in FLASH, only characters 1234567890-.apm
+#define LOAD_FONT7   Font 7. 7 segment 48 pixel font, needs ~2438 bytes in FLASH, only characters 1234567890-.
+#define LOAD_FONT8   Font 8. Large 75 pixel font needs ~3256 bytes in FLASH, only characters 1234567890-.
+
+#define LOAD_GFXFF   FreeFonts. Include access to the 48 Adafruit_GFX free fonts FF1 to FF48 and custom fonts
+
+#define SMOOTH_FONT
+
+#define SPI_FREQUENCY  27000000
+
+ Optional reduced SPI frequency for reading TFT
+#define SPI_READ_FREQUENCY  20000000
+
+ The XPT2046 requires a lower SPI clock rate of 2.5MHz so we define that here
+#define SPI_TOUCH_FREQUENCY  2500000
+```
 ---
 
 ## Перевірка роботи ("Hello World")
+Завантажте на плату цю прошивку:
+```
+#include <TFT_eSPI.h>
+#include <SPI.h>
 
-Після заливки прошивки на ESP32 ви побачите напис Hello World
+TFT_eSPI tft = TFT_eSPI(); 
+
+void setup() {
+  tft.init();
+  tft.setRotation(2);
+  tft.fillScreen(TFT_BLACK);
+  tft.setTextColor(TFT_GREEN, TFT_BLACK); 
+  tft.drawString("Hello World", 25, 10, 2); 
+
+  delay(2000);
+
+  tft.fillScreen(TFT_BLACK);
+}
+
+void loop() {
+  tft.setTextColor(TFT_BLUE, TFT_BLACK); 
+  tft.drawString("Hello GitHub", 25, 5, 2);
+
+  tft.setTextColor(TFT_YELLOW, TFT_BLACK); 
+  tft.drawString("ESP32-TFT-tutorial", 5, 30, 2);
+
+  tft.setTextColor(TFT_ORANGE, TFT_BLACK); 
+  tft.drawString("Size 1", 5, 60, 1);
+
+  tft.setTextColor(TFT_GREEN, TFT_BLACK); 
+  tft.drawString("Size 4", 5, 75, 4);
+}
+```
+Після прошивки ESP32 відобразить напис Hello World, а через 2 секунди з’явиться текст різного розміру та кольору.
+
+![Приклад роботи дисплею, згідно моєї прошивки](images_2.0/Example_disp.jpg)
+
+У коді, який я додав у вигляді файлу, є коментарі. Їх також можете переглянути.
 
 ---
 
